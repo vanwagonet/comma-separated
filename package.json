@@ -1,0 +1,16 @@
+{
+  "name": "comma-separated",
+  "version": "1.0.0",
+  "description": "Simple CSV serialization mirroring JSON.parse and stringify.",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/thetalecrafter/comma-separated.git"
+  },
+  "main": "csv.js",
+  "author": {
+    "name": "Andy VanWagoner",
+    "email": "thetalecrafter@gmail.com",
+    "url": "thetalecrafter.com"
+  },
+  "license": "MIT"
+}
