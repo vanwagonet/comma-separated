@@ -1,5 +1,7 @@
 # Comma Separated
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/thetalecrafter/comma-separated.svg)](https://greenkeeper.io/)
+
 Simple CSV serialization mirroring JSON.parse and stringify. This follows
 [RFC 4180](http://tools.ietf.org/html/rfc4180) rules, and only handles commas
 as delimiters. This is not a general parser for any character-delimited format.
