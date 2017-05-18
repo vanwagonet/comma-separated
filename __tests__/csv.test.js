@@ -12,16 +12,23 @@ describe('CSV', () => {
       )
     })
 
-    it.skip('trailing `,` makes an empty field', () => {
+    it('makes an empty field for leading and trailing `,`', () => {
       assert.deepStrictEqual(
-        CSV.parse('a,b,c,,'),
-        [ [ 'a', 'b', 'c', '', '' ] ]
+        CSV.parse(',a,b,,c,'),
+        [ [ '', 'a', 'b', '', 'c', '' ] ]
       )
     })
 
     it('parses quoted fields', () => {
       assert.deepStrictEqual(
         CSV.parse('"a","b","c"'),
+        [ [ 'a', 'b', 'c' ] ]
+      )
+    })
+
+    it('ignores trailing field text after closing quote', () => {
+      assert.deepStrictEqual(
+        CSV.parse('"a" garbage,"b" goes,"c"here'),
         [ [ 'a', 'b', 'c' ] ]
       )
     })
@@ -116,6 +123,13 @@ describe('CSV', () => {
           [ 1, 1, 'd' ],
           [ 1, 2, 'e' ]
         ]
+      )
+    })
+
+    it('parses an empty string as a single row with no fields', () => {
+      assert.deepStrictEqual(
+        CSV.parse(''),
+        []
       )
     })
   })
