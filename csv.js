@@ -2,7 +2,6 @@
 
 module.exports = {
   parse: function (csv, reviver) {
-    reviver = reviver || function (r, c, v) { return v }
     var chars = csv.split('')
     var c = 0
     var cc = chars.length
@@ -28,7 +27,8 @@ module.exports = {
         } else {
           while (c < cc && chars[c] !== '\r' && chars[c] !== '\n' && chars[c] !== ',') end = ++c
         }
-        row.push(reviver(table.length - 1, row.length, chars.slice(start, end).join('')))
+        var cell = chars.slice(start, end).join('')
+        row.push(reviver ? reviver(table.length - 1, row.length, cell) : cell)
       }
       if (chars[c] === '\r') ++c
       if (chars[c] === '\n') ++c
@@ -37,13 +37,12 @@ module.exports = {
   },
 
   stringify: function (table, replacer) {
-    replacer = replacer || function (r, c, v) { return v }
     var csv = ''
     for (var r = 0, rr = table.length; r < rr; ++r) {
       if (r) { csv += '\r\n' }
       for (var c = 0, cc = table[r].length; c < cc; ++c) {
         if (c) { csv += ',' }
-        var cell = '' + replacer(r, c, table[r][c])
+        var cell = '' + (replacer ? replacer(r, c, table[r][c]) : table[r][c])
         if (/[,\r\n"]/.test(cell)) {
           cell = '"' + cell.replace(/"/g, '""') + '"'
         }
