@@ -22,10 +22,12 @@
   "main": "csv.js",
   "scripts": {
     "pretest": "standard",
-    "test": "mocha '__tests__/*.test.js'"
+    "test": "mocha '__tests__/*.test.js'",
+    "release": "standard-version"
   },
   "devDependencies": {
     "mocha": "^3.4.1",
-    "standard": "^10.0.2"
+    "standard": "^10.0.2",
+    "standard-version": "^4.0.0"
   }
 }
