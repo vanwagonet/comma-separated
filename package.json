@@ -6,11 +6,19 @@
     "type": "git",
     "url": "http://github.com/thetalecrafter/comma-separated.git"
   },
-  "main": "csv.js",
   "author": {
     "name": "Andy VanWagoner",
-    "email": "thetalecrafter@gmail.com",
-    "url": "thetalecrafter.com"
+    "email": "andy@thetalecrafter.com",
+    "url": "www.thetalecrafter.com"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "main": "csv.js",
+  "scripts": {
+    "pretest": "standard",
+    "test": "mocha '__tests__/*.test.js'"
+  },
+  "devDependencies": {
+    "mocha": "^3.4.1",
+    "standard": "^10.0.2"
+  }
 }
