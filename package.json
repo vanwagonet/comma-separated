@@ -12,6 +12,13 @@
     "url": "www.thetalecrafter.com"
   },
   "license": "MIT",
+  "keywords": [
+    "csv",
+    "stringify",
+    "parse",
+    "serialize",
+    "deserialize"
+  ],
   "main": "csv.js",
   "scripts": {
     "pretest": "standard",
