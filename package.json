@@ -4,12 +4,11 @@
   "description": "Simple CSV serialization mirroring JSON.parse and stringify.",
   "repository": {
     "type": "git",
-    "url": "http://github.com/thetalecrafter/comma-separated.git"
+    "url": "http://github.com/vanwagonet/comma-separated.git"
   },
   "author": {
     "name": "Andy VanWagoner",
-    "email": "andy@thetalecrafter.com",
-    "url": "www.thetalecrafter.com"
+    "email": "andy@vanwago.net"
   },
   "license": "MIT",
   "keywords": [
