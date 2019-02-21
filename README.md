@@ -40,11 +40,11 @@ The default `replacer` simply converts to a string. (ie: `'' + value`)
 
 [npm]: https://www.npmjs.org/package/comma-separated
 [npm-image]: https://img.shields.io/npm/v/comma-separated.svg
-[build]: https://travis-ci.org/thetalecrafter/comma-separated
-[build-image]: https://img.shields.io/travis/thetalecrafter/comma-separated.svg
+[build]: https://travis-ci.org/vanwagonet/comma-separated
+[build-image]: https://img.shields.io/travis/vanwagonet/comma-separated.svg
 [greenkeeper]: https://greenkeeper.io/
-[greenkeeper-image]: https://badges.greenkeeper.io/thetalecrafter/comma-separated.svg
+[greenkeeper-image]: https://badges.greenkeeper.io/vanwagonet/comma-separated.svg
 [style]: https://github.com/feross/standard
 [style-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
 [license-image]: https://img.shields.io/npm/l/comma-separated.svg
-[LICENSE]: https://github.com/thetalecrafter/comma-separated/blob/master/LICENSE-MIT
+[LICENSE]: https://github.com/vanwagonet/comma-separated/blob/master/LICENSE-MIT
